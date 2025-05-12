@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import Saudacao from "./components/Saudacao";
+import Pai from './components/Pai';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Saudacao tipo='Bom dia' nome='Jão' />
+    <Pai nome='Jão' sobrenome='Bosco'>
+      {/* Como passa os componentes FILHOS aqui? */}
+    </Pai>
   </React.StrictMode>
 );
