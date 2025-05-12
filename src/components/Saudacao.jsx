@@ -6,6 +6,13 @@ export default class Saudacao extends Component {
         tipo: this.props.tipo,
         nome: this.props.nome
     }
+    
+    constructor(props) {
+        super(props)
+
+        // this.setTipo = this.setTipo.bind(this)
+        this.setNome = this.setNome.bind(this)
+    }
 
     setNome(e) {
         this.setState({ nome: e.target.value })
@@ -33,7 +40,7 @@ export default class Saudacao extends Component {
 
                 <input type="text" placeholder="Nome..."
                     value={nome}
-                    onChange={e => this.setNome(e)} />
+                    onChange={ this.setNome } />
             </div>
         )
     }
